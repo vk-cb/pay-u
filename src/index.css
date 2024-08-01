@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --color-primary: #ffffff;
+    --color-secondary: #f0f0f0;
+    --color-text: #000000;
+    --color-accent: #007bff;
+    --color-background: #ffffff;
+    transition: color 3s ease, background-color 3s ease;
+  }
+  
+  [data-theme='dark'] {
+    --color-primary: #1f2937;
+    --color-secondary: #374151;
+    --color-text: #f9fafb;
+    --color-accent: #3b82f6;
+    --color-background: #111827;
+  }
+  
+  [data-theme='green'] {
+    --color-primary: #065f46;
+    --color-secondary: #10b981;
+    --color-text: #d1fae5;
+    --color-accent: #34d399;
+    --color-background: #064e3b;
+  }
+
+  body {
+    transition: color 3s ease, background-color 3s ease;
+  }
+  
+  /* You may want to add transitions to other elements as well */
+  .header, .footer, .main-content {
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
