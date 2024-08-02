@@ -14,7 +14,10 @@ const Dashboard = () => {
 
   return (
     <div className='h-screen w-screen'>
+      <div className=''>
+
       <Header/>
+      </div>
       <div className='w-full   flex justify-center'>
 
       <div className=' w-full '>

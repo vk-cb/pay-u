@@ -4,10 +4,10 @@ import RouteComponent from './routes'
 
 const App = () => {
   return (
-    <div className='relative '>
+    <div className='relative overflow-x-hidden'>
     
      
-      <div className='top-0 right-0 fixed'>
+      <div className='fixed  top-0 right-5 '>
 
       <ThemeChanger/>
       

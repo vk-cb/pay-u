@@ -27,9 +27,8 @@ export const UserProvider = ({ children }) => {
     const handleLogout = () => {
         localStorage.removeItem("token")
         localStorage.removeItem("authData")
-        
         setLoggedIn(false)
-        
+        navigate('/')
     }       
     const handleReload = () =>{
         const token = localStorage.getItem('token')   

@@ -34,7 +34,7 @@ console.log(auth)
 
         <form
           onSubmit={handleLogin}
-          className="mb-0 mt-6 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8"
+          className="mb-0 mt-6 space-y-4 rounded-lg p-4 bg-secondary shadow-lg sm:p-6 lg:p-8"
         >
           <p className="text-center text-lg font-medium text-text">
             Sign in to your account
@@ -110,7 +110,7 @@ console.log(auth)
 
           <button
             type="submit"
-            className="block w-full rounded-lg  px-5 py-3 text-sm font-medium text-primary bg-btn"
+            className="block w-full rounded-lg  px-5 py-3 text-sm font-medium text-primary bg-btn text-text"
           >
             Sign in
           </button>
