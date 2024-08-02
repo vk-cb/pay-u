@@ -11,26 +11,76 @@
     --color-primary: #ffffff;
     --color-secondary: #f0f0f0;
     --color-text: #000000;
-    --color-accent: #007bff;
-    --color-background: #ffffff;
+    --color-para: #007bff;
+    --color-btn: #090808;
     transition: color 3s ease, background-color 3s ease;
   }
   
-  [data-theme='dark'] {
-    --color-primary: #1f2937;
+  [theme='dark'] {
+    --color-primary: #47638a;
     --color-secondary: #374151;
     --color-text: #f9fafb;
-    --color-accent: #3b82f6;
-    --color-background: #111827;
+    --color-para: #3b82f6;
+    --color-btn: #050911;
   }
   
-  [data-theme='green'] {
-    --color-primary: #065f46;
-    --color-secondary: #10b981;
+  [theme='green'] {
+    --color-primary: #3fa88a;
+    --color-secondary: #176b4f;
     --color-text: #d1fae5;
-    --color-accent: #34d399;
-    --color-background: #064e3b;
+    --color-para: #26d113;
+    --color-btn: #07513d;
   }
+  [theme='blue'] {
+    --color-primary: #021b30;
+    --color-secondary: #098992;
+    --color-text: #FBFBEF;
+    --color-para: #DBFCD1;
+    --color-btn: #579C8A;
+  }
+  [theme='yellow'] {
+    --color-primary: #A04E10;
+    --color-secondary: #EA6D2C;
+    --color-text: #FFDD00;
+    --color-para: #F5D042;
+    --color-btn: #FFD366;
+  }
+
+  
+  /* [data-theme = "dark-1"]{
+    --color-bg-primary : #121212;
+    --color-bg-secondary : #282828;
+    --color-bg-tertiary : #282828;
+    --color-text-primary : #ddd5d5;
+    --color-text-secondary : #717171;
+    --color-text-tertiary : #070707;
+    --color-btn-primary : #a688fa;
+    /* --color-btn-secondary : #070707;
+    --color-btn-tertiary: #070707; */
+  /* } */ 
+/* //   [data-theme = "dark"]{
+  //     --color-bg-primary : #1a1625;
+  //     --color-bg-secondary : #2f2b3a;
+  //     --color-bg-tertiary : #46424f;
+  //     --color-text-primary : #ddd5d5;
+  //     --color-text-secondary : #717171;
+  //     --color-text-tertiary : #070707;
+  //     --color-btn-primary : #a688fa;
+  //     /* --color-btn-secondary : #070707;
+  //     --color-btn-tertiary: #070707; */
+  /* //   }
+  //   [data-theme = "blue"]{
+  //     --color-bg-primary : #001B32;
+  //     --color-bg-secondary : #092B50;
+  //     --color-bg-tertiary : #282828;
+  //     --color-text-primary : #FBFBEF;
+  //     --color-text-secondary : #DBFCD1;
+  //     --color-text-tertiary : #070707;
+  //     --color-btn-primary : #579C8A;
+  //     /* --color-btn-secondary : #070707;
+  //     --color-btn-tertiary: #070707; */
+  /* //   } */ */ */
+
 
   body {
     transition: color 3s ease, background-color 3s ease;

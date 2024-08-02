@@ -2,7 +2,14 @@ import React from 'react'
 
 const Addmoney = () => {
   return (
-    <div>Addmoney</div>
+    <div>
+      <h1>Enter Amount</h1>
+      <div>
+
+      <input type="number" placeholder='Enter ammount'/>
+      <button>Add Money</button>
+      </div>
+    </div>
   )
 }
 

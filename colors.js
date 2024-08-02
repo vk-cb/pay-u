@@ -35,4 +35,39 @@
 // '500': '#FAF7FF',
 // }
 
-}
+// }
+
+
+  /* [data-theme = "dark-1"]{
+    --color-bg-primary : #121212;
+    --color-bg-secondary : #282828;
+    --color-bg-tertiary : #282828;
+    --color-text-primary : #ddd5d5;
+    --color-text-secondary : #717171;
+    --color-text-tertiary : #070707;
+    --color-btn-primary : #a688fa;
+    /* --color-btn-secondary : #070707;
+    --color-btn-tertiary: #070707; */
+  /* } */ 
+//   [data-theme = "dark"]{
+//     --color-bg-primary : #1a1625;
+//     --color-bg-secondary : #2f2b3a;
+//     --color-bg-tertiary : #46424f;
+//     --color-text-primary : #ddd5d5;
+//     --color-text-secondary : #717171;
+//     --color-text-tertiary : #070707;
+//     --color-btn-primary : #a688fa;
+//     /* --color-btn-secondary : #070707;
+//     --color-btn-tertiary: #070707; */
+//   }
+//   [data-theme = "blue"]{
+//     --color-bg-primary : #001B32;
+//     --color-bg-secondary : #092B50;
+//     --color-bg-tertiary : #282828;
+//     --color-text-primary : #FBFBEF;
+//     --color-text-secondary : #DBFCD1;
+//     --color-text-tertiary : #070707;
+//     --color-btn-primary : #579C8A;
+//     /* --color-btn-secondary : #070707;
+//     --color-btn-tertiary: #070707; */
+//   }

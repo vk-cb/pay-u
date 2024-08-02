@@ -1,30 +1,20 @@
 import React from 'react';
 import { FaRegCircleDot } from "react-icons/fa6";
 import { useTheme } from '../../utils/Theme';
-
+import { themeBtn } from '../../../data';
 const ThemeChanger = () => {
   const { setTheme } = useTheme();
 
   return (
-    <div className='flex flex-col w-10 border rounded-lg gap-4 justify-center items-center py-4 bg-gray-500'>
+    <div className='flex flex-col w-10  rounded-bl-lg gap-4 justify-center items-center py-4 bg-gray-500'>
+    { themeBtn.map((data, index)=>
       <button 
-        className=" text-white m-2 p-2"
-        onClick={() => setTheme('light')}
+      key={index}
+        className=""
+        onClick={() => setTheme(data.title)}
       >
-        <FaRegCircleDot />
-      </button>
-      <button 
-        className="bg-dark-200 text-dark-900 m-2 p-2"
-        onClick={() => setTheme('dark')}
-      >
-        <FaRegCircleDot />
-      </button>
-      <button 
-        className="text-green-400 m-2 p-2"
-        onClick={() => setTheme('green')}
-      >
-        <FaRegCircleDot />
-      </button>
+        <FaRegCircleDot color={data.btnColor} />
+      </button>)}
     </div>
   );
 }

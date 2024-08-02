@@ -7,11 +7,12 @@ export default {
         primary: 'var(--color-primary)',
         secondary: 'var(--color-secondary)',
         text: 'var(--color-text)',
-        accent: 'var(--color-accent)',
-        background: 'var(--color-background)',
+        para: 'var(--color-para)',
+        btn: 'var(--color-btn)',
       },
     },
   },
   plugins: [],
+  
   darkMode: 'class'
 };

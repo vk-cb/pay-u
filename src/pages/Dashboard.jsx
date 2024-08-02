@@ -1,11 +1,25 @@
 import React from 'react'
+import Card from './Card'
+import Addmoney from './Addmoney'
+import { useAuthContext } from '../utils/AuthContext'
+import Header from '../components/Header'
 
 const Dashboard = () => {
+  const auth = useAuthContext()
+  const token = localStorage.getItem("token")
+  if(token){
+    console.log(token)
+    auth.handleReload()
+  }
+
   return (
-    <div>
-      <div>
-        <h1>Welcome to Pay-U</h1>
-      
+    <div className='h-screen w-screen'>
+      <Header/>
+      <div className='w-full   flex justify-center'>
+
+      <div className=' w-full '>
+      <Card/>
+      </div>
       </div>
     </div>
   )

@@ -1,7 +1,6 @@
 import React from 'react'
 import ThemeChanger from './components/themeChanger'
-import RouteComponent from '../routes'
-import RandomComponent from './pages/Random'
+import RouteComponent from './routes'
 
 const App = () => {
   return (
@@ -14,7 +13,6 @@ const App = () => {
       
       </div>
       <RouteComponent/>
-      <RandomComponent/>
     </div>
   )
 }
