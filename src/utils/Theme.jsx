@@ -1,27 +1,29 @@
-import { createContext, useContext, useMemo, useState } from "react";
+import React, { createContext, useContext, useMemo, useState, useEffect } from 'react';
 
+export const ThemeContext = createContext();
 
+export const ThemeProvider = ({ children }) => {
+  const [theme, setTheme] = useState('light');
 
-export const ThemeContext = createContext()
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
 
-export const ThemeProvider = ({ children }, props) =>  {
-    const [color, setColor] = useState("dark")
-    const value = useMemo(() => ({ color, setColor }), [color]);
-    return (
-        <ThemeContext.Provider value={value} {...props}>
-            {children}
-        </ThemeContext.Provider>
-    )   
-}
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      setTheme(savedTheme);
+    }
+  }, []);
 
-export const useTheme = () => {
+  const value = useMemo(() => ({ theme, setTheme }), [theme]);
 
-    return useContext(ThemeContext)
-    
-}   
+  return (
+    <ThemeContext.Provider value={value}>
+      {children}
+    </ThemeContext.Provider>
+  );
+};
 
-
-
-
-          
-        
+export const useTheme = () => useContext(ThemeContext);
