@@ -16,6 +16,7 @@ const RouteComponent = () => {
     const openRoutes = [
         {path: '/', component: <Login/>},
         {path: '/signup', component: <Signup/>},
+        {path: '*', component: <Login/>},    
         
     ]
     const protectedRoutes = [
