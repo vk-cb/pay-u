@@ -1,7 +1,6 @@
 import React from 'react'
-import UserTest from './components/UserTest'
 import ThemeChanger from './components/themeChanger'
-import RouteComponent from '../routes'
+import RouteComponent from './routes'
 
 const App = () => {
   return (
