@@ -1,7 +1,8 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import Signup from '../src/pages/Signup'
-import Login from '../src/pages/Login'
+import Signup from '../pages/Signup'
+import Login from '../pages/Login'
+import Dashboard from '../pages/Dashboard'
 
 const RouteComponent = () => {
     
@@ -10,9 +11,9 @@ const RouteComponent = () => {
         {path: '/signup', component: <Signup/>},
         
     ]
-    // const protectedRoutes = [
-    //     {path: '/', component: Home},        
-    // ]
+    const protectedRoutes = [
+        {path: '/', component: <Dashboard/>},        
+    ]
   return (
    
     
