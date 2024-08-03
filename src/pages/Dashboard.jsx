@@ -8,7 +8,6 @@ const Dashboard = () => {
   const auth = useAuthContext()
   const token = localStorage.getItem("token")
   if(token){
-    console.log(token)
     auth.handleReload()
   }
 

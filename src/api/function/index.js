@@ -7,13 +7,13 @@ const api = axios.create({
   },
 });
 
-export const makeApiRequest = async (method, url, data = null, params = null, additionalHeaders = {}) => {
+export const makeApiRequest = async (method, url, data = null, additionalHeaders = {}) => {
+  
   try {
     const response = await api.request({
       method,
       url,
       data,
-      params,
       headers: {
         ...api.defaults.headers,
         ...additionalHeaders,

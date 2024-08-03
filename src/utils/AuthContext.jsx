@@ -16,6 +16,7 @@ export const UserProvider = ({ children }) => {
               setLoggedIn(true)
             localStorage.setItem("token", response.token)
             localStorage.setItem("authData", JSON.stringify(response))
+            localStorage.setItem("id", JSON.stringify(response?.data.id))
             navigate('/dashboard')
           }
           
@@ -27,6 +28,7 @@ export const UserProvider = ({ children }) => {
     const handleLogout = () => {
         localStorage.removeItem("token")
         localStorage.removeItem("authData")
+        localStorage.removeItem("id")
         setLoggedIn(false)
         navigate('/')
     }       
