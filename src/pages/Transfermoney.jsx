@@ -29,7 +29,7 @@ const Transfermoney = () => {
         className="rounded-md border-b-2 bg-primary p-2 w-full mb-4 focus:outline-none"
       />
       <div className='flex w-full gap-0'>
-        <input type="number" className='w-full rounded-l-lg border-b-2 bg-primary outline-none'/>
+        <input placeholder='Enter the amount' type="number" className=' px-2 w-full rounded-l-lg border-b-2 bg-primary outline-none'/>
         <button className='px-2 py-1 border-none rounded-r-lg bg-btn text-primary flex items-center justify-center gap-2 '><FaLocationArrow/> Send</button>
       </div>
     </div>

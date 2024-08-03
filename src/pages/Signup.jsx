@@ -1,7 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { CiUser } from "react-icons/ci";
+import { makeApiRequest } from '../api/function';
+import { SIGNUP } from '../api/api';
 const Signup = () => {
+  const [user, setUser] = useState({
+    name : "",
+    email: "",
+    password: "",
+  })
+
+  const handleChange = (e) => {
+    setUser({...user, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    try {
+      const response = await makeApiRequest("POST", SIGNUP, user)
+      console.log(response)
+      if(response){
+        alert("Registration successful")
+        setUser({name : "", email: "", password: ""})
+      }
+    } catch (error) {
+      console.log(error)
+    }
+    
+  }
   return (
     <div className="mx-auto max-w-screen h-screen px-4 py-36 sm:px-6 lg:px-8 bg-primary">
   <div className="mx-auto max-w-lg text-center">
@@ -19,6 +45,9 @@ const Signup = () => {
         <div className="relative">
           <input
             type="text"
+            onChange={handleChange}
+            name='name'
+            value={user.name}
             className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm outline-none"
             placeholder="Enter name"
           />
@@ -34,6 +63,9 @@ const Signup = () => {
         <div className="relative">
           <input
             type="email"
+            onChange={handleChange}
+            name='email'
+            value={user.email}
             className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm outline-none"
             placeholder="Enter email"
           />
@@ -63,6 +95,9 @@ const Signup = () => {
         <div className="relative">
           <input
             type="password"
+            name='password'
+            value={user.password}
+            onChange={handleChange}
             className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm outline-none"
             placeholder="Enter password"
           />
@@ -94,9 +129,10 @@ const Signup = () => {
 
       <button
         type="button"
+        onClick={handleSubmit}
         className="block w-full rounded-lg  px-5 py-3 text-sm font-medium text-primary bg-btn"
       >
-        Sign in
+        Sign Up
       </button>
 
       <p className="text-center text-sm text-para">
